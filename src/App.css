@@ -1,0 +1,49 @@
+.header {
+  height: 40px;
+  background-color: burlywood;
+  display: flex;
+  align-items: center;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.navLink {
+  font-size: 20px;
+}
+.navLink:not(:last-child) {
+  margin-right: 10px;
+}
+.active {
+  color: rgb(44, 139, 0);
+}
