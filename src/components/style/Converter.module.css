@@ -6,7 +6,10 @@
   display: flex;
   justify-content: center;
 }
-
+.inputs__section {
+  display: flex;
+  justify-content: center;
+}
 h1 {
   margin-top: 10px;
   margin-bottom: 40px;
@@ -23,6 +26,17 @@ input {
   width: 180px;
   margin-right: 5px;
 }
-select:not(:last-child) {
+.input__first {
   margin-right: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .inputs__section {
+    display: flex;
+    flex-direction: column;
+  }
+  .input__first {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
 }

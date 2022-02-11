@@ -46,36 +46,42 @@ export default function CurrencyConverter() {
     <div className={s.converter__section}>
       <div className="container">
         <h1>Currency converter</h1>
-        <input
-          type="number"
-          value={amount1}
-          onChange={e => handleAm1Change(e.target.value)}
-        />
-        <select
-          value={currency1}
-          onChange={e => handleCur1Change(e.target.value)}
-        >
-          {Object.keys(rates).map((rate, index) => (
-            <option key={index} value={rate}>
-              {rate}
-            </option>
-          ))}
-        </select>
-        <input
-          type="number"
-          value={amount2}
-          onChange={e => handleAm2Change(e.target.value)}
-        />
-        <select
-          value={currency2}
-          onChange={e => handleCur2Change(e.target.value)}
-        >
-          {Object.keys(rates).map((rate, index) => (
-            <option key={index} value={rate}>
-              {rate}
-            </option>
-          ))}
-        </select>
+        <div className={s.inputs__section}>
+          <div className={s.input__first}>
+            <input
+              type="number"
+              value={amount1}
+              onChange={e => handleAm1Change(e.target.value)}
+            />
+            <select
+              value={currency1}
+              onChange={e => handleCur1Change(e.target.value)}
+            >
+              {Object.keys(rates).map((rate, index) => (
+                <option key={index} value={rate}>
+                  {rate}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <input
+              type="number"
+              value={amount2}
+              onChange={e => handleAm2Change(e.target.value)}
+            />
+            <select
+              value={currency2}
+              onChange={e => handleCur2Change(e.target.value)}
+            >
+              {Object.keys(rates).map((rate, index) => (
+                <option key={index} value={rate}>
+                  {rate}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
       </div>
     </div>
   );
